@@ -50,7 +50,7 @@
       </view>
       
       <!-- 生成按钮 -->
-      <button class="generate-btn" @tap="generateContent">开始生成</button>
+      <button class="generate-btn" @tap="rewriteNote">开始生成</button>
     </view>
   </view>
 </template>
@@ -114,8 +114,39 @@ export default {
         length: this.textLength,
         style: this.styles[this.currentStyle]
       })
-    }
-  }
+    },
+	async rewriteNote() {
+		console.log("here !")
+			const content = "ff"
+			const style = "可爱风格"
+			const maxWords = "2000"
+	  	    const url = `http://localhost:8000/api1_red_note_rewrite?content=${encodeURIComponent(content)}&style=${encodeURIComponent(style)}&max_words=${maxWords}`;
+	  	
+	  	    try {
+	  	                const response = await fetch(url, {
+	  	                    method: 'POST',
+	  	                    headers: {
+	  	                        'Accept': 'application/json'
+	  	                    },
+	  	                    body: {
+								"content":content,
+								"style":style,
+								"max_words": maxWords
+							} // 空 body，按照你的接口定义
+	  	                });
+	  	    
+	  	                if (!response.ok) {
+	  	                    throw new Error(`HTTP error! Status: ${response.status}`);
+	  	                }
+	  	    
+	  	                const result = await response.json();
+	  	                console.log("API返回的结果:", result);
+	  	                // 可以在这里处理 API 返回的数据，比如更新 Vue 组件的数据
+	  	            } catch (error) {
+	  	                console.error('调用 API 失败:', error);
+	  	            }
+	  	        }
+	  	    }
 }
 </script>
 
