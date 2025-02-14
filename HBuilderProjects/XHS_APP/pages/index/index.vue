@@ -2,7 +2,7 @@
 	<view class="container">
 		<!-- 顶部导航栏 -->
 		<view class="nav-header" :style="{ paddingTop: statusBarHeight + 'px' }">
-			<text class="nav-title">红薯通AI</text>
+			<text class="nav-title">小红书文案生成器</text>
 			<view class="nav-right">
 				<text class="settings-icon">⚙️</text>
 			</view>
@@ -41,7 +41,7 @@
 				statusBarHeight: 20,
 				features: [
 					{
-						icon: '/static/icons/edit.png',
+						icon: '/static/icons/rewrite.png',
 						title: '改写助手',
 						desc: '智能排版，由AI改写',
 						path: '/pages/feature/feature'
@@ -49,19 +49,19 @@
 					{
 						icon: '/static/icons/translate.png',
 						title: '翻译助手',
-						desc: '多语言翻译，由AI完成',
+						desc: 'AI翻译成多种语言',
 						path: '/pages/feature/feature'
 					},
 					{
-						icon: '/static/icons/summarize.png',
-						title: '摘要助手',
-						desc: '智能摘要，由AI生成',
+						icon: '/static/icons/title.png',
+						title: '爆款标题',
+						desc: '新手自媒体必备神器，由AI生成',
 						path: '/pages/feature/feature'
 					},
 					{
 						icon: '/static/icons/grammar.png',
-						title: '语法助手',
-						desc: '语法检查，由AI完成',
+						title: '识图写笔记',
+						desc: 'AI识别图片内容，生成笔记',
 						path: '/pages/feature/feature'
 					}
 				]
