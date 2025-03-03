@@ -1,0 +1,59 @@
+{
+  "name": "xhs-assistant",
+  "version": "1.0.0",
+  "description": "小红书助手",
+  "main": "main.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development uni -p h5",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build": "cross-env NODE_ENV=production uni build",
+    "build:h5": "uni build -p h5",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "serve": "uni serve --port 8080",
+    "info": "uni info",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "^2.0.1",
+    "@dcloudio/uni-h5": "^2.0.1",
+    "@dcloudio/uni-helper-json": "^1.0.13",
+    "@dcloudio/uni-i18n": "^2.0.1",
+    "@dcloudio/uni-mp-weixin": "^2.0.1",
+    "@dcloudio/uni-stat": "^2.0.1",
+    "@vue/shared": "^3.0.0",
+    "vue": "^2.6.11",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.0.4",
+    "@dcloudio/uni-automator": "^2.0.1",
+    "@dcloudio/uni-cli-shared": "^2.0.1",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.1",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-plugin-import": "^1.13.3",
+    "cross-env": "^7.0.3",
+    "postcss-comment": "^2.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.4",
+    "ios >= 8"
+  ],
+  "author": "",
+  "license": "ISC",
+  "uni-app": {
+    "scripts": {
+      "h5": {
+        "title": "小红书助手",
+        "base": "/"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+} 
